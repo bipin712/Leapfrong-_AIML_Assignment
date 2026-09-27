@@ -1,8 +1,8 @@
-# Weather Agent — Gemini SDK Tool-Calling Assignment
+# Weather Agent Gemini SDK Tool-Calling Assignment
 
 An AI agent built with the Google Gemini SDK that retrieves live weather data for multiple cities using the OpenWeather API, calls the weather tool sequentially (one city at a time), and calculates the average temperature across all locations. The averaging is handled by a dedicated Python function rather than left to the model, so the result is exact rather than estimated.
 
-This was built as Assignment 1 for an AI/ML training course. The focus of the assignment is understanding function calling (tool use) in LLM-based agents — how a model can recognize it doesn't know something, call real code to find out, and then use that result in its answer.
+This was built as Assignment 1 for an AI/ML training course. The focus of the assignment is understanding function calling (tool use) in LLM-based agents how a model can recognize it doesn't know something, call real code to find out, and then use that result in its answer.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ This was built as Assignment 1 for an AI/ML training course. The focus of the as
 
 ## Overview
 
-A language model on its own has no way of knowing today's temperature in any city — that information isn't part of its training data, and even if it were, weather changes hourly. This project solves that using tool calling: Gemini is given access to real Python functions and decides when it needs to call them to answer a question it can't answer from memory alone.
+A language model on its own has no way of knowing today's temperature in any city that information isn't part of its training data, and even if it were, weather changes hourly. This project solves that using tool calling: Gemini is given access to real Python functions and decides when it needs to call them to answer a question it can't answer from memory alone.
 
 Given a request like:
 
@@ -85,7 +85,7 @@ weather-agent-assignment/
 - Gemini API key: aistudio.google.com -> Get API key -> Create API key
 - OpenWeather API key: openweathermap.org/api -> sign up (free) -> My API keys
 
-Note: a newly created OpenWeather key can take up to a couple of hours to activate. A 401 error right after signup is expected — just wait and retry rather than assuming something's wrong.
+Note: a newly created OpenWeather key can take up to a couple of hours to activate. A 401 error right after signup is expected just wait and retry rather than assuming something's wrong.
 
 **2. Get the notebook**
 
@@ -151,7 +151,7 @@ A few choices in this project were deliberate and worth explaining rather than j
 | Criteria | Marks | How it's satisfied |
 |---|---|---|
 | Gemini SDK agent implementation | 1 | `client.chats.create()` with tools registered |
-| Correct OpenWeather API integration | 1 | `get_current_weather()` — real API call, metric units, JSON parsing |
+| Correct OpenWeather API integration | 1 | `get_current_weather()` real API call, metric units, JSON parsing |
 | Sequential tool calls for 3 locations | 1 | One tool call per city, enforced by the function's design, visible in logged output |
 | Correct average temperature calculation | 1 | Separate `calculate_average_temperature()` tool using exact Python arithmetic |
 | Clear output, error handling & code quality | 1 | Formatted final report, try/except around all API calls, docstrings and type hints throughout |
@@ -159,7 +159,7 @@ A few choices in this project were deliberate and worth explaining rather than j
 ## Author
 
 [BIPIN PANDEY]
-AI/ML Training — Leapfrog
+AI/ML Training Leapfrog
 
 
 
